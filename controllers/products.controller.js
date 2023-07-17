@@ -93,8 +93,8 @@ export const deleteProductById = async(req,res) => {
 
 // CREATE
 export const postProducts = async(req,res) => {
-    console.log('from auth middleware',req.user);
-    console.log(req.body);
+    //console.log('from auth middleware',req.user);
+   // console.log(req.body);
     try{
         // const prods =  await new Products(req.body);
         // await prods.save();

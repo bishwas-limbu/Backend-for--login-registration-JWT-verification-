@@ -2,6 +2,7 @@ import express from 'express';
 import userRouter from './users.route.js'; // for users
 import homeRouter from './home.route.js'; // for "/"
 import productsRouter from './products.route.js'; // for products
+import authMiddleware from '../middlewares/auth.middleware.js';
 
 const router = express.Router();// express method for router
 
@@ -10,7 +11,7 @@ router.use(homeRouter);// route for "/"
 
 router.use('/users',userRouter); // route for user
 
-router.use('/products',productsRouter);// route for products
+router.use('/products',authMiddleware,productsRouter);// route for products
 
 
 
